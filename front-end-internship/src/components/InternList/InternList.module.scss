@@ -1,0 +1,9 @@
+@import "../../config.scss";
+.InternList {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    @include shadow;
+    border-radius: 0.5rem;
+}

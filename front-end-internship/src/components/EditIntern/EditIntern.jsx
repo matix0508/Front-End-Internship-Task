@@ -2,8 +2,8 @@ import React from "react";
 import { useQuery } from "react-query";
 import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
-import { useForm } from "react-hook-form";
 import { Form } from "../Form/Form";
+import styles from "./EditIntern.module.scss";
 
 const EditIntern = () => {
   const { id } = useParams();
@@ -30,7 +30,7 @@ const EditIntern = () => {
   // }, [id]);
 
   return (
-    <div>
+    <div className={styles.EditIntern}>
       <NavLink to="/"> Back to list </NavLink>{" "}
       <Form name={data.name} email={data.email} onSubmit={onSubmit} />
     </div>
