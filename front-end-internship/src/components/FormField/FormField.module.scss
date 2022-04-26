@@ -1,0 +1,23 @@
+@import "../../config.scss";
+.FormField {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    &:focus {
+        @include shadow;
+    }
+    input {
+        margin: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        resize: vertical;
+    }
+    label {
+        margin-top: 1rem;
+    }
+    span {
+        font-size: small;
+        resize: vertical;
+    }
+}
