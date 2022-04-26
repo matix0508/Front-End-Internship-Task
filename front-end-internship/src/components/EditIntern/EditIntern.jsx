@@ -3,15 +3,11 @@ import { useQuery } from "react-query";
 import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { Form } from "../Form/Form";
 
 const EditIntern = () => {
   const { id } = useParams();
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+
   const onSubmit = (data) => console.log(data);
 
   const { data, isLoading, isError } = useQuery(`intern${id}`, () =>
@@ -19,13 +15,13 @@ const EditIntern = () => {
   );
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p> Loading... </p>;
   }
   if (isError) {
-    return <p>Error :(</p>;
+    return <p> Error: ( </p>;
   }
   if (!data) {
-    return <p>No data :/</p>;
+    return <p> No data: /</p>;
   }
 
   // useEffect(() => {
@@ -36,13 +32,7 @@ const EditIntern = () => {
   return (
     <div>
       <NavLink to="/"> Back to list </NavLink>{" "}
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label> Name </label>{" "}
-        <input defaultValue={data.name} {...register("name")} />
-        <label> Email </label>{" "}
-        <input defaultValue={data.email} {...register("email")} />
-        <input type="submit" value="Submit" />
-      </form>{" "}
+      <Form name={data.name} email={data.email} onSubmit={onSubmit} />
     </div>
   );
 };
