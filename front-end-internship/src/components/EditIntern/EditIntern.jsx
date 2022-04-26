@@ -4,6 +4,8 @@ import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
 import { Form } from "../Form/Form";
 import styles from "./EditIntern.module.scss";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const EditIntern = () => {
   const { id } = useParams();
@@ -31,8 +33,12 @@ const EditIntern = () => {
 
   return (
     <div className={styles.EditIntern}>
-      <NavLink to="/"> Back to list </NavLink>{" "}
-      <Form name={data.name} email={data.email} onSubmit={onSubmit} />
+      <div className={styles.EditIntern__back}>
+        <NavLink to="/">
+          <FontAwesomeIcon icon={faHome} />{" "}
+        </NavLink>
+      </div>
+      <Form name={data.name} email={data.email} onSubmit={onSubmit} />{" "}
     </div>
   );
 };

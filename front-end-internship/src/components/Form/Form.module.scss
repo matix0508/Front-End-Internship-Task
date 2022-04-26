@@ -1,0 +1,31 @@
+@import "../../config.scss";
+.Form {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+    color: $onPrimary;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    input {
+        margin: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        resize: vertical;
+    }
+    label {
+        margin-top: 1rem;
+    }
+    &__submit {
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: $secondary;
+        color: $onSecondary;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            @include shadow;
+        }
+    }
+}

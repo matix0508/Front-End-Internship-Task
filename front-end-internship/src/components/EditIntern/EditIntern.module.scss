@@ -1,0 +1,19 @@
+@import "../../config.scss";
+.EditIntern {
+    &__back {
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 50%;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        background-color: $primary;
+        transition: all 0.3s ease-in-out;
+        * {
+            color: $onPrimary;
+        }
+        &:hover {
+            @include shadow;
+        }
+    }
+}
