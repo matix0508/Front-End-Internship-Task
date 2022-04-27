@@ -7,7 +7,6 @@ import styles from "./EditIntern.module.scss";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 const EditIntern = () => {
   const { id } = useParams();
   const queryClient = useQueryClient();
@@ -22,7 +21,6 @@ const EditIntern = () => {
       queryClient.refetchQueries(`intern${id}`);
       navigate("/");
     });
-    
   };
 
   const { data, isLoading, isError } = useQuery(`intern${id}`, () =>
@@ -39,19 +37,14 @@ const EditIntern = () => {
     return <p> No data: /</p>;
   }
 
-  // useEffect(() => {
-  //     //TODO: get intern from REST api http://localhost:3001/interns/:id
-  //     console.log(`I want to get intern with id: ${id}!`)
-  // }, [id]);
-
   return (
     <div className={styles.EditIntern}>
       <div className={styles.EditIntern__back}>
         <NavLink to="/">
-          <FontAwesomeIcon icon={faHome} />{" "}
+          <FontAwesomeIcon icon={faHome} />
         </NavLink>
       </div>
-      <Form data={data} onSubmit={onSubmit} />{" "}
+      <Form data={data} onSubmit={onSubmit} />
     </div>
   );
 };

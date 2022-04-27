@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
+      <img className="logo" src="/logo.svg" alt="logo" />
       <Routes>
         <Route path="/interns/:id" exact element={<EditIntern />} />{" "}
         <Route path="/" element={<InternList />} />{" "}

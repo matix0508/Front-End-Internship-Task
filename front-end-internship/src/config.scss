@@ -1,9 +1,12 @@
-$bg: #F9DC5C;
+$bg: #f9dc5c;
 $onBg: #984447;
-$primary: #BF211E;
-$onPrimary: #F9DC5C;
-$secondary: #E9CE2C;
-$onSecondary: #69A197;
+$primary: #bf211e;
+$onPrimary: #f9dc5c;
+$secondary: #e9ce2c;
+$onSecondary: #69a197;
+$error: #a3270c;
+$focus: #d3f2ff;
+$base: #222222;
 @mixin shadow {
     box-shadow: 0 1px 5px #000;
 }
