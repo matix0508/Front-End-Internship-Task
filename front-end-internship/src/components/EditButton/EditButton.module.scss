@@ -1,0 +1,15 @@
+@import "../../config.scss";
+.EditButton {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    display: flex;
+    color: $base;
+    &__icon {
+        margin: 1rem;
+        margin-left: 10px;
+    }
+    &__text {
+        margin: 1rem;
+    }
+}

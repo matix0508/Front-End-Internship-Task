@@ -4,6 +4,7 @@ import styles from "./InternItem.module.scss";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import classNames from "classnames";
+import { EditButton } from "../EditButton/EditButton";
 
 export const InternItem = ({ intern, idx }) => {
   console.log(idx)
@@ -12,10 +13,7 @@ export const InternItem = ({ intern, idx }) => {
   return (
     <div className={classNames([styles.InternItem, styleColor])}>
       <div className={styles.InternItem__name}> {intern.name} </div>{" "}
-      <div className={styles.InternItem__edit}>
-        {" "}
-        <NavLink to={`/interns/${intern.id}`}> <FontAwesomeIcon icon={faPen} color={styles.InternItem__edit.color} /> </NavLink>
-      </div>
+      <EditButton  />
     </div>
   );
 };
