@@ -24,9 +24,10 @@ const InternList = () => {
 
   return (
     <div className={styles.InternList}>
-      {interns.map((u) => (
-        <InternItem key={u.id} intern={u} />
-      ))}
+      <div className={styles.InternList__title}> Participants </div>{" "}
+      {interns.map((u, i) => (
+        <InternItem key={u.id} intern={u} idx={i} />
+      ))}{" "}
     </div>
   );
 };

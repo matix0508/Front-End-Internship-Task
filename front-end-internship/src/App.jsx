@@ -1,7 +1,7 @@
 import "./App.css";
 import EditIntern from "./components/EditIntern/EditIntern";
-import InternList from "./components/InternList/InternList";
 import { Routes, Route } from "react-router-dom";
+import InternList from "./components/InternList/InternList";
 
 function App() {
   return (

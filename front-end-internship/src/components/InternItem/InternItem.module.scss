@@ -1,25 +1,31 @@
 @import "../../config.scss";
 .InternItem {
     display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    padding: 1rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    background-color: $primary;
-    border-radius: 0.5rem;
-    transition: all 0.5s ease-in-out;
-    * {
-        color: $onPrimary;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    position: static;
+    width: 496px;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+    box-sizing: border-box;
+    &_even {
+        background-color: lighten($base, 50);
+    }
+    &_odd {
+        background-color: lighten($base, 60);
     }
     &:hover {
-        background-color: $secondary;
-        * {
-            color: $onSecondary;
-        }
-        @include shadow;
+        border: 2px solid #222222;
+        background-color: lighten($base, 70);
     }
     &__name {
         font-size: 1.1rem;
