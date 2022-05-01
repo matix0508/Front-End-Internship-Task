@@ -1,6 +1,6 @@
 import React from "react";
-import { useForm } from "react-hook-form";
-import styles from "./FormField.module.scss";
+import { default as fieldStyle } from "./FormField.module.scss";
+import { default as dateStyle } from "./FormFieldDate.module.scss";
 
 export const FormField = ({
   register,
@@ -10,12 +10,14 @@ export const FormField = ({
   validation,
   type,
   registerName,
+  date,
 }) => {
-    const registerLabel = registerName !== undefined ? registerName : label.toLowerCase();
+  const registerLabel =
+    registerName !== undefined ? registerName : label.toLowerCase();
+  const styles = date ? dateStyle : fieldStyle;
   return (
     <div className={styles.FormField}>
-      <label> {label} </label>
-      {error && <span role="alert"> {error.message} </span>}{" "}
+      <label> {label} * </label>
       <input
         defaultValue={data}
         {...register(registerLabel, {
@@ -25,6 +27,7 @@ export const FormField = ({
         })}
         type={type}
       />{" "}
+      {error && <span role="alert"> {error.message} </span>}{" "}
     </div>
   );
 };

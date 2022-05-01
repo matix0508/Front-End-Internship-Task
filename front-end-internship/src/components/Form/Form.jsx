@@ -63,6 +63,7 @@ export const Form = ({ data, onSubmit }) => {
           },
         }}
       />
+      <div className={styles.Form__dates}>
       <FormField
       register={register}
         label={"Internship Start"}
@@ -76,6 +77,7 @@ export const Form = ({ data, onSubmit }) => {
           },
         }}
         registerName={"internshipStart"}
+        date={true}
       />
       <FormField
       register={register}
@@ -94,7 +96,9 @@ export const Form = ({ data, onSubmit }) => {
             message: "Internship end date must be after start date",
           }
         }}
+        date={true}
       />
+      </div>
       <button className={styles.Form__submit} type="submit">Submit</button>
     </form>
   );

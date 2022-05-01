@@ -1,21 +1,43 @@
 @import "../../config.scss";
 .Form {
+    /* Auto layout */
     display: flex;
     flex-direction: column;
-    background-color: $primary;
-    color: $onPrimary;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
+    align-items: flex-start;
+    padding: 0px;
+    position: static;
+    width: 100%;
+    height: 472px;
+    left: calc(50% - 496px/2);
+    top: 127px;
     &__submit {
-        margin: 1rem;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        background-color: $secondary;
-        color: $onSecondary;
-        transition: all 0.2s ease-in-out;
-        &:hover {
-            @include shadow;
-        }
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 40px;
+        position: static;
+        width: 224px;
+        height: 48px;
+        left: 0px;
+        top: 424px;
+        /* Neutral/Base */
+        background-color: $base;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    &__dates {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px;
+        position: static;
     }
 }

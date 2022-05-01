@@ -1,20 +1,17 @@
 @import "../../config.scss";
-.EditButton {
-    font-size: 0.9rem;
-    font-weight: normal;
-    margin-bottom: 0.5rem;
+.BackButton {
+    /* Auto layout */
     display: flex;
-    color: $base;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    &__icon {
-        margin: 1rem;
-        margin-left: 10px;
-        fill: $base;
-    }
+    padding: 12px;
+    position: absolute;
+    width: 112px;
+    height: 48px;
     &__text {
-        /* label */
         position: static;
-        width: 28px;
+        width: 80px;
         height: 24px;
         left: 32px;
         top: 12px;
@@ -26,6 +23,15 @@
         line-height: 24px;
         /* identical to box height, or 150% */
         /* Neutral/Base */
+        color: $base;
+        padding: 0.5rem;
+    }
+    &__icon {
+        position: static;
+        width: 24px;
+        height: 24px;
+        left: 0px;
+        top: 12px;
         color: $base;
     }
 }

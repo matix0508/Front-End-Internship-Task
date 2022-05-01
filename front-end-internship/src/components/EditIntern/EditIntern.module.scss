@@ -1,19 +1,43 @@
 @import "../../config.scss";
 .EditIntern {
+    /* content */
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 80px;
+    // position: absolute;
+    width: 496px;
+    height: fit-content;
+    margin: auto;
+    /* Neutral/Lighten 70 */
+    background-color: lighten($base, 70);
+    &__title {
+        position: static;
+        width: 496px;
+        height: 47px;
+        left: calc(50% - 496px/2);
+        top: 40px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 47px;
+        /* identical to box height */
+        /* Neutral/Base */
+        color: $base;
+    }
     &__back {
-        margin: 1rem;
-        padding: 1rem;
-        border-radius: 50%;
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 0px;
         position: absolute;
-        left: 1rem;
-        top: 1rem;
-        background-color: $primary;
-        transition: all 0.3s ease-in-out;
-        * {
-            color: $onPrimary;
-        }
-        &:hover {
-            @include shadow;
-        }
+        width: 112px;
+        height: 48px;
+        left: calc(50% - 112px/2 - 272px);
+        top: 40px;
     }
 }

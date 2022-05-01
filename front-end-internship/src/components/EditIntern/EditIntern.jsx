@@ -2,10 +2,9 @@ import React from "react";
 import { useQuery, useQueryClient } from "react-query";
 import { useParams, useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
+import { BackButton } from "../BackButton/BackButton";
 import { Form } from "../Form/Form";
 import styles from "./EditIntern.module.scss";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const EditIntern = () => {
   const { id } = useParams();
@@ -39,11 +38,10 @@ const EditIntern = () => {
 
   return (
     <div className={styles.EditIntern}>
-      <div className={styles.EditIntern__back}>
-        <NavLink to="/">
-          <FontAwesomeIcon icon={faHome} />
-        </NavLink>
-      </div>
+      <div className={styles.EditIntern__title}>Edit</div>
+      <NavLink className={styles.EditIntern__back} to="/">
+        <BackButton />
+      </NavLink>
       <Form data={data} onSubmit={onSubmit} />
     </div>
   );

@@ -1,12 +1,7 @@
-$bg: #E5E5E5;
-$onBg: #984447;
-$primary: #bf211e;
-$onPrimary: #f9dc5c;
-$secondary: #e9ce2c;
-$onSecondary: #69a197;
 $error: #a3270c;
 $focus: #d3f2ff;
 $base: #222222;
+$bg: lighten(desaturate($base, 40), 80);
 @mixin shadow {
     box-shadow: 0 1px 5px #000;
 }
