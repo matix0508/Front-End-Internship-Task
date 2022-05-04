@@ -30,7 +30,6 @@ export const Form = ({ data, onSubmit }) => {
   });
 
   const watchStart = watch("internshipStart");
-  console.log(watchStart);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.Form}>
@@ -67,7 +66,7 @@ export const Form = ({ data, onSubmit }) => {
       <FormField
       register={register}
         label={"Internship Start"}
-        data={data.internshipStart}
+        data={data.internshipStart.slice(0, 10)}
         error={errors.internshipStart}
         type={"date"}
         validation={{
@@ -82,7 +81,7 @@ export const Form = ({ data, onSubmit }) => {
       <FormField
       register={register}
         label={"Internship End"}
-        data={data.internshipEnd}
+        data={data.internshipEnd.slice(0, 10)}
         error={errors.internshipEnd}
         type={"date"}
         registerName={"internshipEnd"}

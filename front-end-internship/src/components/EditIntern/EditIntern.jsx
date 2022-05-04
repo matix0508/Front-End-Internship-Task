@@ -12,6 +12,8 @@ const EditIntern = () => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
+    data["internshipStart"] = data["internshipStart"] + "T00:00+00Z";
+    data["internshipEnd"] = data["internshipEnd"] + "T00:00+00Z";
     fetch(`http://localhost:3001/interns/${id}`, {
       method: "PUT",
       body: JSON.stringify(data),
